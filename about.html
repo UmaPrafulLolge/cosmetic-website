@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cosmatic Website</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+       :root {
+      --light-purple: #e8dff7;
+      --soft-purple: #bfa3f7;
+      --medium-purple: #9a75e0;
+      --dark-purple: #573d99;
+      --background: #f9f8fb;
+      --text-dark: #333;
+    }
+
+    body {
+      background-color: var(--light-purple);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      background: transparent;
+      padding: 1.5rem 3rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--dark-purple);
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--medium-purple);
+    }
+
+
+      .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    gap: 50px;
+  }
+
+  .hero-image{
+    align-items: top;
+  }
+
+  /* Text container with fade+slide animation */
+  .hero-text {
+    max-width: 600px;
+    animation: fadeInSlide 1.2s ease forwards;
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  @keyframes fadeInSlide {
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Large heading */
+  .hero-text h2 {
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+ .hero-text p {
+    font-size: 19px;
+    font-weight: 400;
+    color: #121111;
+    margin-bottom: 35px;
+    line-height: 1.5;
+  }
+ 
+
+ 
+    </style>
+</head>
+<body>
+    <section>
+          <nav class="d-flex justify-content-center align-items-center">
+    <a href="home.html">HOME</a>
+    <a href="ourproduct.html">OUR PRODUCTS</a>
+    <a href="#">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="blog.html">BLOG</a>
+
+  </nav>
+ <section class="hero">
+      <div class="hero-image">
+           <img src="photos/store.jpg" alt="store image" width="700" height="600"/>
+
+      </div>
+    <div class="hero-text">
+         In 2018, in a tiny studio apartment filled with the scent of botanical oils,<br>
+        LUMERA was born. Its founder, a young formulation enthusiast named Aira Lumen, <br>
+        began blending natural ingredients to solve her own sensitive-skin issues. 
+        <br> believed beauty should feel pure, purposeful, <br>
+        and planet-kind—not masked behind harsh chemicals or unrealistic ideals.
+          </p>
+          <h2>
+            🌱 The Startup Spark
+          </h2>
+          <p>
+            LUMERA started with one product: a hand-crafted Radiance Elixir, <br>
+            made from cold-pressed marula, rosehip, and ethically sourced chamomile. 
+            <br>Aira posted the story behind the formula on social media—raw, honest, and deeply personal. <br>
+            Without ads, without revenue, without a team, the brand sold out its first 200 bottles in 48 hours, <br>
+            fueled purely by community trust.
+          </p>
+       <h2>🌿Building the Tribe</h2>
+<p>
+Customers weren’t just buying skincare—they were joining a movement. <br>
+LUMERA invited its early supporters to vote on new products, packaging, and fragrances. <br>
+The brand expanded into cleansers, toners, and serums, all rooted in clean beauty and minimalist routines.<br>
+
+By its second year, LUMERA had:<br>
+
+1. a 100K follower community,<br>
+2. a waitlist for every drop, and<br>
+3. partnerships with eco-conscious suppliers globally.<br>
+</p>
+
+<h2>✨ Scaling with Soul</h2>
+<p>
+When retail giants noticed LUMERA, Aira refused to compromise sustainability for speed. <br>
+Instead, she built her own small-batch green lab, investing in biodegradable packaging, <br>
+carbon-neutral processes, and cruelty-free certifications.
+
+This integrity became LUMERA’s signature.<br>
+
+Within five years, LUMERA entered:<br>
+
+1. 18 countries,<br>
+2. major global retailers,<br>
+3. luxury spas,<br>
+
+and collaborations with dermatologists and clean beauty influencers.<br>
+</p>
+<h2>🌍 Becoming an MNC</h2>
+<p>
+Today, LUMERA Beauty is a multinational clean-cosmetics leader, <br>
+headquartered in Singapore, with R&D in South Korea and France. <br>
+Its products span skincare, body care, and functional makeup—all using bio-active botanicals and skin-friendly science.<br>
+
+But the brand never forgot its start.<br>
+
+Every product still carries the values that built it:<br>
+
+1. Transparency<br>
+2. Ethical sourcing<br>
+3. Minimal-but-mighty formulas<br>
+
+Community-driven creation
+
+LUMERA is now more than a cosmetic company.
+It’s a global movement proving that beauty can be powerful,<br> 
+responsible, and deeply human.
+</p>        
+
+
+<!-- 
+  <section class="hero">
+     <div class="hero-image">
+           <img src="photos/store.jpg" alt="store image" width="500" height="500"/>
+
+      </div>
+  </section>
+<section class="hero">
+    
+    <div class="hero-container">
+      <div class="row align-items-center">
+         
+        <div class="col-lg-6 mx-auto text-aling=center">
+          <p class="hero-text" >
+        In 2018, in a tiny studio apartment filled with the scent of botanical oils,<br>
+        LUMERA was born. Its founder, a young formulation enthusiast named Aira Lumen, <br>
+        began blending natural ingredients to solve her own sensitive-skin issues. 
+        <br> believed beauty should feel pure, purposeful, <br>
+        and planet-kind—not masked behind harsh chemicals or unrealistic ideals.
+          </p>
+          <h2>
+            🌱 The Startup Spark
+          </h2>
+          <p>
+            LUMERA started with one product: a hand-crafted Radiance Elixir, <br>
+            made from cold-pressed marula, rosehip, and ethically sourced chamomile. 
+            <br>Aira posted the story behind the formula on social media—raw, honest, and deeply personal. <br>
+            Without ads, without revenue, without a team, the brand sold out its first 200 bottles in 48 hours, <br>
+            fueled purely by community trust.
+          </p>
+       <h2>🌿Building the Tribe</h2>
+<p>
+Customers weren’t just buying skincare—they were joining a movement. <br>
+LUMERA invited its early supporters to vote on new products, packaging, and fragrances. <br>
+The brand expanded into cleansers, toners, and serums, all rooted in clean beauty and minimalist routines.<br>
+
+By its second year, LUMERA had:<br>
+
+1. a 100K follower community,<br>
+2. a waitlist for every drop, and<br>
+3. partnerships with eco-conscious suppliers globally.<br>
+</p>
+
+<h2>✨ Scaling with Soul</h2>
+<p>
+When retail giants noticed LUMERA, Aira refused to compromise sustainability for speed. <br>
+Instead, she built her own small-batch green lab, investing in biodegradable packaging, <br>
+carbon-neutral processes, and cruelty-free certifications.
+
+This integrity became LUMERA’s signature.<br>
+
+Within five years, LUMERA entered:<br>
+
+1. 18 countries,<br>
+2. major global retailers,<br>
+3. luxury spas,<br>
+
+and collaborations with dermatologists and clean beauty influencers.<br>
+</p>
+<h2>🌍 Becoming an MNC</h2>
+<p>
+Today, LUMERA Beauty is a multinational clean-cosmetics leader, <br>
+headquartered in Singapore, with R&D in South Korea and France. <br>
+Its products span skincare, body care, and functional makeup—all using bio-active botanicals and skin-friendly science.<br>
+
+But the brand never forgot its start.<br>
+
+Every product still carries the values that built it:<br>
+
+1. Transparency<br>
+2. Ethical sourcing<br>
+3. Minimal-but-mighty formulas<br>
+
+Community-driven creation
+
+LUMERA is now more than a cosmetic company.
+It’s a global movement proving that beauty can be powerful,<br> 
+responsible, and deeply human.
+</p>        
+</div>
+      </div> -->
+    </div>
+      
+    </section>
+</body>
+</html>

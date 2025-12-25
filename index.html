@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cosmetics Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Custom pastel purple theme */
+    :root {
+      --light-purple: #e8dff7;
+      --soft-purple: #bfa3f7;
+      --medium-purple: #9a75e0;
+      --dark-purple: #573d99;
+      --background: #f9f8fb;
+      --text-dark: #333;
+    }
+
+    body {
+      background-color: var(--light-purple);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      background: transparent;
+      padding: 1.5rem 3rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--dark-purple);
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--medium-purple);
+    }
+
+    /* Header Hero */
+    .hero-section {
+      background-color: var(--light-purple);
+      padding: 6rem 2rem 4rem;
+      text-align: left;
+      position: relative;
+      overflow: visible;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: var(--dark-purple);
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+    }
+
+    .hero-text span {
+      font-size: 2rem;
+      color: var(--medium-purple);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-subscribe {
+      margin-top: 1rem;
+      background-color: var(--medium-purple);
+      color: white;
+      border-radius: 30px;
+      padding: 0.5rem 1.8rem;
+      border: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .btn-subscribe:hover {
+      background-color: var(--dark-purple);
+    }
+
+    /* Hero Products */
+    .hero-products {
+      position: absolute;
+      right: 8vw;
+      top: 4rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .hero-products img {
+      max-height: 140px;
+      object-fit: contain;
+      filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.05));
+      border-radius: 12px;
+      background: white;
+      padding: 10px;
+    }
+
+    /* Decorative flower */
+    .decorative-flower {
+      position: absolute;
+      right: 3vw;
+      top: 8rem;
+      pointer-events: none;
+      opacity: 0.6;
+      max-width: 150px;
+    }
+
+    /* Mid Section */
+    .mid-section {
+      background-color: white;
+      padding: 4rem 2rem;
+    }
+
+    .mid-section .main-img {
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgb(93 74 163 / 0.15);
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+    }
+
+    .mid-section-text {
+      max-width: 500px;
+      color: var(--dark-purple);
+    }
+
+    .mid-section h2 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .mid-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+    }
+
+    .btn-details {
+      background-color: var(--medium-purple);
+      border-radius: 30px;
+      padding: 0.5rem 1.8rem;
+      color: white;
+      border: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .btn-details:hover {
+      background-color: var(--dark-purple);
+    }
+
+    /* Product Cards Section */
+    .product-cards {
+      padding: 3rem 2rem;
+      background-color: var(--light-purple);
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 8px 20px rgb(93 74 163 / 0.05);
+      text-align: center;
+      color: var(--dark-purple);
+      margin-bottom: 2rem;
+    }
+
+    .product-card img {
+      max-width: 90px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(2px 3px 3px rgb(93 74 163 / 0.15));
+    }
+
+    .product-card h5 {
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 1rem;
+      min-height: 56px;
+    }
+
+    .btn-shop {
+      background-color: var(--medium-purple);
+      border-radius: 30px;
+      padding: 0.4rem 1.5rem;
+      color: white;
+      border: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: background-color 0.3s;
+    }
+
+    .btn-shop:hover {
+      background-color: var(--dark-purple);
+    }
+
+    /* Spring Orders Section */
+    .spring-orders {
+      padding: 4rem 2rem;
+      background: white;
+      text-align: center;
+    }
+
+    .spring-orders h3 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--dark-purple);
+    }
+
+    .spring-orders p {
+      opacity: 0.7;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .spring-orders img {
+      max-width: 320px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgb(93 74 163 / 0.1);
+    }
+
+    /* Footer */
+    footer {
+      padding: 10rem;
+      text-align: center;
+      background-color: var(--light-purple);
+      color: var(--dark-purple);
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      .hero-products {
+        position: static;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .hero-section {
+        text-align: center;
+        padding: 3rem 2rem 2rem;
+      }
+
+      nav {
+        padding: 1rem 1rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-text {
+        font-size: 1.3rem;
+      }
+
+      .mid-section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="d-flex justify-content-center align-items-center">
+    <a href="index.html">HOME</a>
+    <a href="ourproduct.html">OUR PRODUCTS</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="blog.html">BLOG</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section position-relative">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mx-auto text-start">
+          <p class="hero-text">
+           Radiate Confidence,<br> One Shade at a Time
+          </p>
+          <button class="btn btn-subscribe">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero products images -->
+    <div class="hero-products d-none d-lg-flex">
+      <img src="photos/moisturizer.jpg" alt="Product 1" />
+      <img src="photos/serum.jpg" alt="Product 2" />
+      <img src="photos/sunscreen.jpg" alt="Product 3" />
+    </div>
+
+    <!-- Decorative flower image -->
+    <!-- <img class="decorative-flower d-none d-lg-block" src="https://i.ibb.co/4j6KShs/flower-decor.png"
+      alt="Decorative Flower" /> -->
+  </section>
+
+  <!-- Mid Section -->
+  <section class="mid-section d-flex justify-content-center align-items-center gap-5 flex-lg-row flex-column">
+    <img src="photos/product.jpg" alt="Cosmetics & Flower" class="main-img" />
+    <div class="mid-section-text">
+      <h2> </h2>
+      <p>
+        Beauty is power; a smile is its sword.” 
+        <br>Beauty without expression is boring.” The best part of beauty is that which no picture can express.” 
+        <br>Beauty is truth, truth beauty.”
+      </p>
+      <button class="btn btn-details">Details</button>
+    </div>
+  </section>
+
+  <!-- Product Cards Section -->
+  <section class="product-cards container my-5">
+    <h3 class="text-center mb-4" style="color: var(--dark-purple); font-weight: 700;">Our Products</h3>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-4">
+        <div class="product-card">
+          <img src="photos/glitter.jpg" alt="Set 1" />
+          <h5>Glitter</h5>
+          <p>Explore our range of beautiful glitter designed for all skin types.</p>
+          <button class="btn btn-shop">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-4">
+        <div class="product-card">
+          <img src="photos/Toner.jpg" alt="Set 2" />
+          <h5>Toner</h5>
+          <p>Brighten up your day with our specially curated glow toner collection.</p>
+          <button class="btn btn-shop">Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-4">
+        <div class="product-card">
+          <img src="photos/serum.jpg" alt="Set 3" />
+          <h5>Serum</h5>
+          <p>Hydrate and nourish your skin with our premium quality serum.</p>
+          <button class="btn btn-shop">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spring Orders Section -->
+  <section class="spring-orders">
+    <h3>Spring Orders</h3>
+    <p>Discover the freshness of spring encapsulated in our exclusive product launches.</p>
+    <img src="photos/pexels-monirathnak-24602074.jpg" alt="Spring Order" />
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- &copy; 2024 Cosmetics Company. All rights reserved. -->
+  </footer>
+
+  <!-- Bootstrap JS
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+  
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Cosmetics Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Custom pastel purple theme */
+    :root {
+      --light-purple: #e8dff7;
+      --soft-purple: #bfa3f7;
+      --medium-purple: #9a75e0;
+      --dark-purple: #573d99;
+      --background: #f9f8fb;
+      --text-dark: #333;
+    }
+
+    body {
+      background-color: var(--light-purple);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      background: transparent;
+      padding: 1.5rem 3rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--dark-purple);
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--medium-purple);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: var(--light-purple);
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: var(--dark-purple);
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+    }
+
+    .hero-text span {
+      font-size: 2rem;
+      color: var(--medium-purple);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    /* Contact Form Section */
+    .contact-section {
+      background-color: white;
+      padding: 4rem 2rem;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form .form-control {
+      border-radius: 10px;
+      border: 1px solid var(--soft-purple);
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form .form-control:focus {
+      border-color: var(--medium-purple);
+      box-shadow: 0 0 0 0.2rem rgba(154, 117, 224, 0.25);
+    }
+
+    .btn-submit {
+      background-color: var(--medium-purple);
+      color: white;
+      border-radius: 30px;
+      padding: 0.5rem 1.8rem;
+      border: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .btn-submit:hover {
+      background-color: var(--dark-purple);
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .contact-info h4 {
+      color: var(--dark-purple);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: var(--light-purple);
+      color: var(--dark-purple);
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      nav {
+        padding: 1rem 1rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-text {
+        font-size: 1.3rem;
+      }
+
+      .contact-section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="d-flex justify-content-center align-items-center">
+    <a href="index.html">HOME</a>
+    <a href="ourproduct.html">OUR PRODUCTS</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="blog.html">BLOG</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <p class="hero-text">
+        Get in Touch with Us<br>
+        <span>We're Here to Help!</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-form">
+        <h3 class="text-center mb-4" style="color: var(--dark-purple); font-weight: 700;">Contact Us</h3>
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h4>Contact Information</h4>
+        <p><strong>Email:</strong> info@cosmeticswebsite.com</p>
+        <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+        <p><strong>Address:</strong> 123 Beauty Lane, Glamour City, GC 12345</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Cosmetics Company. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
